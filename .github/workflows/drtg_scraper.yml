@@ -1,8 +1,6 @@
 name: Defensive Rating Automatic Scraper
 
-on:
-  schedule:
-    - cron: '*/5 * * * *'
+on: [push]
 
 jobs:
   run:
