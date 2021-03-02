@@ -1,8 +1,6 @@
 name: Execute notebook
 
-on:
-  schedule:
-    - cron: '* * * * *'
+on: [push]
 
 jobs:
   run:
