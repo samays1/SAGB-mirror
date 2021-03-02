@@ -1,19 +1,14 @@
 name: Defensive Rating Automatic Scraper
 
-on:
-  schedule:
-    - cron: '* * * * *'
+on: [push]
 
 jobs:
-  build-linux:
+  run:
     runs-on: ubuntu-latest
-    strategy:
-      max-parallel: 5
-
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v1
     - name: setup python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v1
       with:
         python-version: 3.8
     - name: run 
