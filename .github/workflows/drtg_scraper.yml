@@ -14,6 +14,7 @@ jobs:
           python-version: 3.8
       - name: execute python script 
         run: |
+          git pull origin master
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install lxml
