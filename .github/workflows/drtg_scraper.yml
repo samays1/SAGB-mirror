@@ -14,7 +14,6 @@ jobs:
           python-version: 3.8
       - name: execute python script 
         run: |
-          git pull origin master
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install lxml
@@ -23,10 +22,9 @@ jobs:
         run: |
           git config --local user.email "ssuragimath@berkeley.edu"
           git config --local user.name "Samay Suragimath"
-          git add -A
           git commit -m "update data" -a
       - name: push changes
-        uses: ad-m/github-push-action@v0.6.0
+        uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main  
+          branch: ${{ github.ref }}
