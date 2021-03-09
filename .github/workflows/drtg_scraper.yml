@@ -28,7 +28,7 @@ jobs:
         run: |
           git config --local user.email "ssuragimath@berkeley.edu"
           git config --local user.name "Samay Suragimath"
-          git commit -m "update data" -a
+          git commit -m "automatically updated" -a
       - name: push changes
         uses: ad-m/github-push-action@master
         with:
