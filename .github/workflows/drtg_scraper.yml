@@ -2,6 +2,10 @@ name: Defensive Rating Automatic Scraper
 
 on: [push]
 
+# on:
+#   schedule:
+#     - cron: '0 12 * * *' # runs at 12:00 UTC everyday
+
 jobs:
   build:
     runs-on: ubuntu-latest
